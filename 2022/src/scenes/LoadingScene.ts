@@ -1,6 +1,6 @@
 import { Scene } from 'phaser'
 
-export default class LoadingScene extends Scene {
+export class LoadingScene extends Scene {
   
   constructor() {
     super('loading-scene')
@@ -8,13 +8,11 @@ export default class LoadingScene extends Scene {
 
   preload() {
     this.load.baseURL = 'assets/'
-    this.load.image('logo', 'logo.png')
+    this.load.image('player', 'logo.png')
   }
 
-  init() {}
-
   create(): void {
-    this.add.sprite(100, 100, 'logo')
+    this.scene.start('game-scene')
   }
 
   update() {}

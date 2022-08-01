@@ -1,5 +1,2 @@
-import LoadingScene from "./LoadingScene";
-
-export {
-  LoadingScene
-}
+export * from "./LoadingScene";
+export * from "./GameScene";

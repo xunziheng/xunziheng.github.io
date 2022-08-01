@@ -1,11 +1,11 @@
 import { Game, Scale, Types, AUTO } from 'phaser'
 import './style.css'
-import { LoadingScene } from './scenes'
+import { GameScene, LoadingScene } from './scenes'
 
 export const gameConfig: Types.Core.GameConfig = {
   type: AUTO,
   parent: 'phaser-root',
-  backgroundColor: '#EFC4CE',
+  // backgroundColor: '#EFC4CE',
   scale: {
     mode: Scale.ScaleModes.NONE,
     width: window.innerWidth,
@@ -31,7 +31,7 @@ export const gameConfig: Types.Core.GameConfig = {
   audio: {
     disableWebAudio: false,
   },
-  scene: [LoadingScene],
+  scene: [LoadingScene, GameScene],
 }
 
 window.game = new Game(gameConfig)
