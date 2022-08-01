@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="荀紫恒的小站">
+    <meta name="keywords" content="xunziheng,荀紫恒,about">
+    <meta name="author" content="xunziheng">
+    <title>荀紫恒的小站</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/onlinewebfonts.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/css/about.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/iconfont.css">
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+    <link rel="icon" href="./favicon.ico">
+</head>
+
+<body>
+    <span class="mobile btn-mobile-menu">
+        <i class="social iconfont icon-list btn-mobile-menu__icon"></i>
+        <i class="social iconfont icon-angleup btn-mobile-close__icon hidden"></i>
+    </span>
+    <header id="panel" class="panel-cover">
+        <div class="panel-main">
+            <div class="panel-main__inner panel-inverted">
+                <div class="panel-main__content">
+                    <div class="ih-item circle effect right_to_left">            
+                        <a href="#" title="" class="blog-button">
+                            <div class="img"><img src="./img/Avatar.jpg" alt="img" class="js-avatar iUp profilepic"></div>
+                            <div class="info iUp">
+                                <div class="info-back">
+                                    <h2>荀紫恒</h2>
+                                    <p>1998</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <h1 class="panel-cover__title panel-title iUp">
+                        <a href="#" title="荀紫恒">关于我</a>
+                    </h1>
+                    <p class="panel-cover__subtitle panel-subtitle iUp">ABOUT ME</p>
+                    <hr class="panel-cover__divider iUp" />
+                    <p id="description" class="panel-cover__description iUp">
+                        我叫荀紫恒
+                    </p>
+                    <p id="description" class="panel-cover__description iUp">
+                        今年（<span id="now_year">{now_year}</span>）<span id="age">{age}</span>岁了，社会<span id="grade">{grade}</span>年级小学生
+                    </p>
+                    <p id="description" class="panel-cover__description iUp">
+                        喜欢编程、篮球、<del> 学习 </del>、奇思妙想天马行空
+                    </p>
+                    <p id="description" class="panel-cover__description iUp">
+                        永恒的梦想 “世界人民大团结” 和 “<span style="font-size: 12px;opacity: 0.5;">花不完的钱¥</span>”
+                    </p>
+                    <p id="description" class="panel-cover__description iUp">
+                        熟悉Java和Spring生态、SQL和noSQL
+                    </p>
+                    <p id="description" class="panel-cover__description iUp">
+                        熟悉JS|C3|H5、jQ|Vue|React和UI生态
+                    </p>
+                    <p id="description" class="panel-cover__description iUp">
+                        保持热爱，不断<u>qianxing</u><span class='cursor_show'>|</span>
+                    </p>
+                    <p id="description" class="panel-cover__description iUp">
+                        <span style="font-size: 12px;">（不说了，来bug了）</span>
+                    </p>
+                    <div class="navigation-wrapper iUp">
+                        <div>
+                            <nav class="cover-navigation cover-navigation--primary">
+                                <ul class="navigation">
+                                    <li class="navigation__item">
+                                        <a href="./index.html" class="blog-button">首页</a>
+                                    </li>
+                                    <!-- <li class="navigation__item">
+                                        <a href="https://dmego.me" class="blog-button" target="_blank">博客</a>
+                                    </li> -->
+                                    <li class="navigation__item">
+                                        <a href="./resume.html" class="blog-button">简历</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="./about.html" class="blog-button">关于</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-cover--overlay cover-slate"></div>
+        </div>
+        <div class="remark iUp">
+            <a href="https://beian.miit.gov.cn/" target="_blank"><p class="power">冀ICP备18017935号 <script type="text/javascript" src="https://v1.cnzz.com/z_stat.php?id=1279744688&web_id=1279744688"></script></p></a>
+        </div>
+    </header>
+    <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/js/fetch.min.js"></script>
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+    <script type="text/javascript" src="./assets/js/moment.js"></script>
+</body>
+
+</html>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4L0GELWRT2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4L0GELWRT2');
+
+  (function aboutShow(){
+    let year = moment().format('YYYY')
+    let age = Number(year) - 1998
+    let grade = Number(year) - 2020
+    console.log('[date]', year, age, grade)
+    $('#now_year').text(year)
+    $('#age').text(age)
+    $('#grade').text(grade)
+  })();
+</script>

@@ -1,0 +1,22 @@
+@-webkit-keyframes Blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes Blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.cursor_show {
+    -webkit-animation: Blink 1s ease-in 0s infinite;
+    animation: Blink 1s ease-in 0s infinite;
+    font-weight: bold;
+    position: relative;
+}
