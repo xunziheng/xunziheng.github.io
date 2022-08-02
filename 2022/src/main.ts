@@ -6,6 +6,7 @@ export const gameConfig: Types.Core.GameConfig = {
   type: AUTO,
   parent: 'phaser-root',
   // backgroundColor: '#EFC4CE',
+  backgroundColor: '#ffffff',
   scale: {
     mode: Scale.ScaleModes.NONE,
     width: window.innerWidth,

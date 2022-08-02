@@ -62,15 +62,49 @@
          "draworder":"topdown",
          "id":2,
          "name":"ground",
-         "objects":[],
+         "objects":[
+                {
+                 "class":"",
+                 "height":14,
+                 "id":5,
+                 "name":"",
+                 "rotation":0,
+                 "visible":true,
+                 "width":46.25,
+                 "x":144.75,
+                 "y":272.75
+                }, 
+                {
+                 "class":"",
+                 "height":14.5,
+                 "id":7,
+                 "name":"",
+                 "properties":[
+                        {
+                         "name":"collides",
+                         "type":"bool",
+                         "value":true
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":46.5,
+                 "x":144.5,
+                 "y":272.5
+                }],
          "opacity":1,
+         "properties":[
+                {
+                 "name":"collides",
+                 "type":"bool",
+                 "value":true
+                }],
          "type":"objectgroup",
          "visible":true,
          "x":0,
          "y":0
         }],
  "nextlayerid":3,
- "nextobjectid":1,
+ "nextobjectid":8,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.9.0",
@@ -98,9 +132,25 @@
          "imagewidth":112,
          "margin":0,
          "name":"nature-paltformer-tileset-16x16",
+         "properties":[
+                {
+                 "name":"collides",
+                 "type":"bool",
+                 "value":false
+                }],
          "spacing":0,
          "tilecount":77,
          "tileheight":16,
+         "tiles":[
+                {
+                 "id":1,
+                 "properties":[
+                        {
+                         "name":"collides",
+                         "type":"bool",
+                         "value":true
+                        }]
+                }],
          "tilewidth":16,
          "transparentcolor":"#ff00ff"
         }],

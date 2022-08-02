@@ -8,40 +8,50 @@ export class Player extends Physics.Arcade.Sprite {
     super(scene, x, y, 'player')
     scene.add.existing(this)
     scene.physics.add.existing(this)
-    this.body.setSize(30, 30)
-    this.body.setOffset(8, 0)
+    this.setScale(0.3)
     this.cursors = this.scene.input.keyboard.createCursorKeys()
+    this.initAnimations();
+    this.setGravityY(20000);
   }
 
   protected checkFlip(): void {
     if (this.body.velocity.x < 0) {
-      this.scaleX = -1
-    } else {
       this.scaleX = 1
+    } else {
+      this.scaleX = -1
     }
   }
 
   update(): void {
     this.setVelocity(0)
-
-    if (this.cursors.up.isDown) {
-      this.body.velocity.y = -110
+    
+    console.log(this.body.blocked.down)
+    if (this.cursors.up.isDown && this.body.blocked.down) {
+      this.setVelocityY(-5500)
     }
 
     if (this.cursors.left.isDown) {
       this.body.velocity.x = -110
       this.checkFlip()
-      this.setOffset(48, 15)
-    }
-
-    if (this.cursors.down.isDown) {
-      this.body.velocity.y = 110
+      this.anims.play("run", true);
     }
 
     if (this.cursors.right.isDown) {
       this.body.velocity.x = 110
       this.checkFlip()
-      this.setOffset(15, 15)
+      this.anims.play("run", true);
     }
+  }
+
+  private initAnimations(): void {
+    this.scene.anims.create({
+      key: "run",
+      frames: this.scene.anims.generateFrameNames("player", {
+        prefix: "run-",
+        start: 1,
+        end: 4,
+      }),
+      frameRate: 8,
+    });
   }
 }

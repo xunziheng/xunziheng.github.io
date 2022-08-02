@@ -8,7 +8,7 @@ export class LoadingScene extends Scene {
 
   preload() {
     this.load.baseURL = 'assets/'
-    this.load.image('player', 'logo.png')
+    this.load.atlas('player', 'players.png', 'players.json')
 
     this.load.image('Platform', 'tilemaps/Platform.png')
     this.load.tilemapTiledJSON('tilemapPlatform', 'tilemaps/Platform.json')
