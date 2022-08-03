@@ -16,30 +16,27 @@ export class Player extends Physics.Arcade.Sprite {
 
   protected checkFlip(): void {
     if (this.body.velocity.x < 0) {
-      this.scaleX = 1
+      this.scaleX = 0.3
     } else {
-      this.scaleX = -1
+      this.scaleX = -0.3
     }
   }
 
-  update(): void {
-    this.setVelocity(0)
-    
-    console.log(this.body.blocked.down)
-    if (this.cursors.up.isDown && this.body.blocked.down) {
-      this.setVelocityY(-5500)
-    }
-
+  update(): void {    
     if (this.cursors.left.isDown) {
       this.body.velocity.x = -110
       this.checkFlip()
       this.anims.play("run", true);
-    }
-
-    if (this.cursors.right.isDown) {
+    } else if (this.cursors.right.isDown) {
       this.body.velocity.x = 110
       this.checkFlip()
       this.anims.play("run", true);
+    } else {
+      this.setVelocity(0)
+    }
+
+    if (this.cursors.up.isDown && this.body.blocked.down) {
+      this.setVelocityY(-5000)
     }
   }
 

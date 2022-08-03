@@ -14,7 +14,7 @@ export class GameScene extends Scene {
   create(): void {
     this.initMap()
     this.player = new Player(this, 100, 100)
-    this.showDebugWalls();
+    // this.showDebugWalls();
     this.physics.add.collider(this.player, this.groundLayer)
   }
 
